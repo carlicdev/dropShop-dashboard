@@ -15,10 +15,6 @@ const Main = () => {
             <Header className='site-layout-background' style={{ padding: 2}}>
             </Header>
             <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
             <Switch>
                 <Route exact path='/products' component={Products} />
                 <Route exact path='/orders' component={Orders} />

@@ -1,7 +1,13 @@
 const Product = require('../models/product');
 
-exports.get_all_products = (req, res) => {
-    res.send('Hello from al_product');
+exports.get_all_products = async (req, res) => {
+    try {
+        const products = await Product.find();
+        res.status(200).json({products})
+    } catch(err) {
+        console.log(err);
+    }
+
 };
 
 exports.get_single_product = (req, res) => {
