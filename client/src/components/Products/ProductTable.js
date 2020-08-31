@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Table, Tag, Space } from 'antd';
+import { Table, Space } from 'antd';
 
 const ProductTable = () => {
     const [products, setProducts] = useState(null);
-    const [columns, setColumns] = useState([
+    const [columns] = useState([
         {title: 'Artículo', dataIndex:'name', key:'name'},
         {title: 'Descripción', dataIndex:'description', key:'description'},
         {title: 'Precio', dataIndex:'price', key:'price'},
         {title: 'Inventario', dataIndex:'onStore', key:'onStore'},
-        {title: 'Ajustes', key:'ajustes', render: () => <Space><a onClick={onClick}>Eliminar</a> <a>Editar</a></Space>},
+        {title: 'Ajustes', key:'ajustes', render: () => <Space><div onClick={onClick}>Eliminar</div> <div>Editar</div></Space>},
     ])
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const ProductTable = () => {
             const res = await axios.get('/api/products/');
             const arr = res.data.products;
             arr.map(i => {
-                i.key = arr.indexOf(i)
+                return i.key = arr.indexOf(i)
             })
             setProducts(arr);
         };

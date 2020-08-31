@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 
 import Products from '../Products/Products';
 import Orders from '../Orders/Orders';

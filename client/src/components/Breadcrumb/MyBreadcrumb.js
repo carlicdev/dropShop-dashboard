@@ -7,7 +7,7 @@ const MyBreadcrumb = ({history}) => {
             <Breadcrumb style={{ margin: '16px 0' }}>
                 {
                     history.map(i => {
-                        return <Breadcrumb.Item>{i}</Breadcrumb.Item>
+                        return <Breadcrumb.Item key={i}>{i}</Breadcrumb.Item>
                     })
                 }
             </Breadcrumb>
