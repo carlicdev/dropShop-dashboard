@@ -1,2 +1,5 @@
 @import '~antd/dist/antd.css';
 
+.mt-5 {
+margin-top: 1rem;
+}
